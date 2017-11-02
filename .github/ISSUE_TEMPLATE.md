@@ -39,9 +39,9 @@ English or Japanese please.
 [ ] any problem or bug report
 [ ] feature request
 
-**The plugin version:**  (check one with "x")
-[ ] **2.0-beta3 (github)** 
-[ ] **2.0 (npm)** 
+**The plugin version:**  (check one with "x") If you use old version, please try the latest version first
+[ ] **2.1.0 (npm)**
+[ ] **multiple_maps (github)** 
 
 **If you choose 'problem or bug report', please select OS:**  (check one with "x")
 [ ] **Android**
