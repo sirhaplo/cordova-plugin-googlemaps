@@ -19,7 +19,7 @@ If you can't solve your problem, please post your problems with enough informati
 
 If you share your project files on Github(or others), your issue would be fixed soon.
 If you can't share your project files (i.e. company project), please create a demo project, then share it.
-No sharing any code, we probably can not help you anything.
+No sharing any code, we probably can not help you with anything.
 
 
 ## For the person who want to request new feature
@@ -39,9 +39,9 @@ English or Japanese please.
 [ ] any problem or bug report
 [ ] feature request
 
-**The plugin version:**  (check one with "x")
-[ ] **2.0-beta3 (github)** 
-[ ] **2.0 (npm)** 
+**The plugin version:**  (check one with "x") If you use old version, please try the latest version first
+[ ] **2.1.0 (npm)**
+[ ] **multiple_maps (github)** 
 
 **If you choose 'problem or bug report', please select OS:**  (check one with "x")
 [ ] **Android**
