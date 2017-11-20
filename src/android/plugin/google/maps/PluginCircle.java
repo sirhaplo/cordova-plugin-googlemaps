@@ -104,13 +104,21 @@ public class PluginCircle extends MyPlugin implements MyPluginInterface {
     cordova.getActivity().runOnUiThread(new Runnable() {
       @Override
       public void run() {
-        // Recalculate the circle bounds
+      try{
+      // Recalculate the circle bounds
         String propertyId = "circle_bounds_" + circle.getId();
         LatLngBounds bounds = PluginUtil.getBoundsFromCircle(circle.getCenter(), circle.getRadius());
         pluginMap.objects.put(propertyId, bounds);
 
         circle.setCenter(center);
         callbackContext.success();
+      }
+      catch (Exception e) {
+          e.printStackTrace();
+          callbackContext.error(e.getMessage() + "");
+      }
+
+        
       }
     });
   }

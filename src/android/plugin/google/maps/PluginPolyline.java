@@ -71,25 +71,30 @@ public class PluginPolyline extends MyPlugin implements MyPluginInterface  {
     cordova.getActivity().runOnUiThread(new Runnable() {
       @Override
       public void run() {
+        try{
+          Polyline polyline = map.addPolyline(polylineOptions);
+          String id = "polyline_" + polyline.getId();
+          pluginMap.objects.put(id, polyline);
 
-        Polyline polyline = map.addPolyline(polylineOptions);
-        String id = "polyline_" + polyline.getId();
-        pluginMap.objects.put(id, polyline);
+          String boundsId = "polyline_bounds_" + polyline.getId();
+          pluginMap.objects.put(boundsId, builder.build());
 
-        String boundsId = "polyline_bounds_" + polyline.getId();
-        pluginMap.objects.put(boundsId, builder.build());
+          String propertyId = "polyline_property_" + polyline.getId();
+          pluginMap.objects.put(propertyId, properties);
 
-        String propertyId = "polyline_property_" + polyline.getId();
-        pluginMap.objects.put(propertyId, properties);
-
-        try {
-          JSONObject result = new JSONObject();
-          result.put("hashCode", polyline.hashCode());
-          result.put("id", id);
-          callbackContext.success(result);
-        } catch (JSONException e) {
-          e.printStackTrace();
-          callbackContext.error("" + e.getMessage());
+          try {
+            JSONObject result = new JSONObject();
+            result.put("hashCode", polyline.hashCode());
+            result.put("id", id);
+            callbackContext.success(result);
+          } catch (JSONException e) {
+            e.printStackTrace();
+            callbackContext.error("" + e.getMessage());
+          }
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            callbackContext.error(e.getMessage() + "");
         }
       }
 

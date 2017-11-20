@@ -107,7 +107,7 @@ Circle.prototype.getVisible = function() {
 Circle.prototype.getClickable = function() {
     return this.get('clickable');
 };
-Circle.prototype.setCenter = function(center) {
+Circle.prototype.setCenter = function (center) {
     this.set('center', center);
     return this;
 };

@@ -69,10 +69,11 @@ Map.prototype.refreshLayout = function(event) {
     exec.call(this, null, null, this.id, 'resizeMap', []);
 };
 
-Map.prototype.getMap = function(mapId, div, options) {
+Map.prototype.getMap = function (mapId, div, options) {
+    console.error("*****************************************************MAPPA");
     var self = this,
         args = [mapId];
-
+    
     if (!common.isDom(div)) {
         self.set("visible", false);
         options = div;
